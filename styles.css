@@ -1,0 +1,277 @@
+:root {
+  --bg: #f3f1ec;
+  --bg-strong: #1f2a37;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #4d5965;
+  --accent: #7a5a28;
+  --accent-soft: #c7b08a;
+  --border: #d8d1c6;
+  --success: #1b5e20;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #ece7dd 0%, var(--bg) 50%, #efede8 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  margin-top: 0;
+}
+
+.hero {
+  color: #fff;
+  padding: 1.25rem 1.25rem 4rem;
+  background:
+    linear-gradient(120deg, rgb(18 32 51 / 95%), rgb(33 49 71 / 92%)),
+    repeating-linear-gradient(
+      -45deg,
+      rgb(255 255 255 / 6%) 0 2px,
+      transparent 2px 14px
+    );
+}
+
+.topbar,
+.hero-content,
+main,
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  letter-spacing: 0.06em;
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+}
+
+.hero-content {
+  margin-top: 3rem;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.hero p {
+  color: #dce3eb;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.access-tabs {
+  margin-top: 0.75rem;
+  background: rgb(255 255 255 / 12%);
+  border-color: rgb(255 255 255 / 35%);
+}
+
+.access-tabs .tab {
+  color: #1d2b3a;
+}
+
+.access-tabs .tab:hover {
+  background: #d7c19a;
+  color: #1d2b3a;
+}
+
+.access-tabs .tab.is-active {
+  background: #d87a2c;
+  color: #fff;
+}
+
+main {
+  padding: 1.25rem;
+  margin-top: -2rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 24px rgb(23 36 54 / 7%);
+}
+
+.compliance ul,
+.audience-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.compliance li,
+.audience-card li {
+  margin-bottom: 0.35rem;
+}
+
+.audience {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 0.4rem;
+  background: #f1eee8;
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.tab {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  font-weight: 700;
+  background: transparent;
+  color: #3f4a58;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.subtabs .sub-tab:hover {
+  background: #ead9bf;
+  color: #1d2b3a;
+  transform: translateY(-1px);
+}
+
+.tab.is-active {
+  background: #24364e;
+  color: #fff;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.is-active {
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cdd4de;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #7d9fc4;
+  border-color: transparent;
+}
+
+.check {
+  align-items: flex-start;
+  font-weight: 400;
+}
+
+.check input {
+  width: auto;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #8a672f;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border-color: #94a3b8;
+  color: #fff;
+}
+
+.btn-light {
+  background: #e7edf5;
+  color: #11263e;
+}
+
+.footer {
+  color: #44515f;
+  padding: 1.3rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 820px) {
+  .audience,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
